@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+  </head>
+  <style>
+  body{
+    margin:0;
+    padding:0;
+    background-color: white;
+  }
+  .contact-form{
+    width: 85%;
+    max-width: 600px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    padding:30px 40px;
+
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+    font-family: "Montserrat", sans-serif;
+    margin-right:100px;
+
+  }
+  .contact-form h1{
+    margin-top: 0;
+    font-weight: 200;
+
+  }
+  .contact-form label{
+    display:block;
+    text-align: left;
+    color: #333;
+    text-transform:uppercase;
+    font-family: sans-serif;
+    font-size:16px;
+  }
+input[type='text']{
+  width:100%;
+  height:30px;
+  font-size:12px;
+  margin-top:6px;
+}
+input[type='email']{
+  width:100%;
+  height:30px;
+  font-size:12px;
+  margin-top:6px;
+}
+  input[type='submit']{
+    background-color:purple;
+    color:white;
+    width:150px;
+    height:40px;
+  }
+  </style>
+  <body>
+<div class="contact-form">
+  <h1>Letter Details</h1>
+  <form id="txtb" method="POST" action="/letter">
+    <label for="To">To : </label>
+    <input type="text" name="To" placeholder="Enter whom you are writing to" >
+    <br></br>
+    <label for="day">Day : </label>
+    <input type="text" name="day" placeholder="Enter the day">
+    <br></br>
+    <label for="month">Month: </label>
+    <input type="text" name="month" placeholder="Enter the month">
+    <br></br>
+    <label for="year">Year : </label>
+    <input type="text" name="year" placeholder="Enter the year">
+    <br></br>
+    <label for="subject">Subject : </label>
+    <input type="text" name="subject" placeholder="Enter the subject">
+    <br></br>
+    <label for="team">Team : </label>
+    <input type="text" name="team" placeholder="Enter your team name">
+    <br></br>
+    <label for="eventname">Your Event name : </label>
+    <input type="text" name="eventname" placeholder="Enter your event name">
+    <br></br>
+    <label for="dates">Dates : </label>
+    <input type="text" name="dates" placeholder="Enter the dates of the event">
+    <br></br>
+    <label for="timefrom">from : </label>
+    <input type="text" name="timefrom" placeholder="Enter the time from when event starts">
+    <br></br>
+    <label for="timeend">End : </label>
+    <input type="text" name="timeend" placeholder="Enter the time when the event ends">
+    <br></br>
+    <label for="body">About your event body: </label>
+    <input type="text" name="body" placeholder="Enter about your event, main body">
+    <br></br>
+    <label for="facultyname">Faculty Name : </label>
+    <input type="text" name="facultyname" placeholder="Enter the facultyname">
+    <br></br>
+    <label for="facultydesignation">Faculty Designation for the event : </label>
+    <input type="text" name="facultydesignation" placeholder="Enter the Designation of the faculty for your event">
+    <br></br>
+<input type="submit" value='SUBMIT'>
+</form>
+  </body>
+</html>

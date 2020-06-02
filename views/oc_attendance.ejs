@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Custom template Form</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+
+<style>
+body{
+	background-color: rgb(25, 25, 25);
+}
+	.booking-form {
+	max-width: 642px;
+	width: 100%;
+    margin: auto;
+
+}
+
+.booking-form>form {
+	background-color: #101113;
+	padding: 30px 20px;
+    border-radius: 3px;
+    margin: auto;
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.booking-form .form-control {
+	background-color: #f5f5f5;
+	border: none;
+	height: 45px;
+	border-radius: 3px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-weight: 400;
+	color: #101113;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form .form-control::placeholder {
+	color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 0px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: #101113;
+	font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 400;
+	margin-bottom: 5px;
+	display: block;
+	text-transform: uppercase;
+}
+
+.booking-form .submit-btn {
+	color: #ffffff;
+	background-color: #73007e;
+	font-weight: 700;
+	height: 50px;
+	border: none;
+	width: 100%;
+	display: block;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+</style>
+
+<body>
+
+		<div id="booking" class="section">
+			<div class="section-center">
+				<div class="container">
+					<div class="row">
+						<div class="booking-form">
+							<form id="txtb" method="POST" action="/ocattendance">
+								<h3 style="text-align: center; color: white;">Organizing Committee  Attendance Permission</h3>
+								<br/><br/>
+                <div class="form-group">
+                  <label class="form-label" for="designation" >DESIGNATION :</label>
+                  <input class="form-control" type="tel" name="designation" placeholder="Enter the designation of sender" />
+                </div>
+
+								<div class="form-group">
+									<label class="form-label" for="department">DEPARTMENT :</label>
+									<input class="form-control" type="tel" name="department" placeholder="Enter the respective department" />
+								</div>
+
+								<div class="form-group">
+									<label class="form-label" for="date">ENTER DATE :</label>
+									<input class="form-control" type="date" name="date" />
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="subject">SUBJECT : :</label>
+									<input class="form-control" type="tel" name="subject" placeholder="Enter Letter Subject" />
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="respects">RESPECTS :</label>
+									<input class="form-control" type="tel" name="respects" placeholder="i.e Sir/Madam" />
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="team_name">TEAM NAME/FORRUM NAME :</label>
+									<input class="form-control" type="tel" name="team_name" placeholder="Enter Team Name" />
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="event_name">YOUR EVENT NAME :</label>
+									<input class="form-control" type="tel" name="event_name" placeholder="Enter Event Name" />
+								</div>
+								<br />
+								<label class="form-label">Select date and time :</label>
+								<br />
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="form-group">
+											<label class="form-label" for="fromdate">From</label>
+											<input class="form-control" name="fromdate" type="date" />
+										</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="start_hour">Hour</label>
+													<select class="form-control" name="start_hour">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+														<option>6</option>
+														<option>7</option>
+														<option>8</option>
+														<option>9</option>
+														<option>10</option>
+														<option>11</option>
+														<option>12</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="start_min">Min</label>
+													<select class="form-control" name="start_min">
+														<option>05</option>
+														<option>10</option>
+														<option>15</option>
+														<option>20</option>
+														<option>25</option>
+														<option>30</option>
+														<option>35</option>
+														<option>40</option>
+														<option>45</option>
+														<option>50</option>
+														<option>55</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="start_meridian">AM/PM</label>
+													<select class="form-control" name="start_meridian">
+														<option>AM</option>
+														<option>PM</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-5">
+										<div class="form-group">
+											<label class="form-label" for="todate">To</label>
+											<input class="form-control" name="todate" type="date" />
+										</div>
+									</div>
+									<div class="col-sm-7">
+										<div class="row">
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="end_hour">Hour</label>
+													<select class="form-control" name="end_hour">
+														<option>1</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+														<option>6</option>
+														<option>7</option>
+														<option>8</option>
+														<option>9</option>
+														<option>10</option>
+														<option>11</option>
+														<option>12</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="end_min">Min</label>
+													<select class="form-control" name="end_min">
+														<option>05</option>
+														<option>10</option>
+														<option>15</option>
+														<option>20</option>
+														<option>25</option>
+														<option>30</option>
+														<option>35</option>
+														<option>40</option>
+														<option>45</option>
+														<option>50</option>
+														<option>55</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group">
+													<label class="form-label" for="end_meridian">AM/PM</label>
+													<select class="form-control" name="end_meridian">
+														<option>AM</option>
+														<option>PM</option>
+													</select>
+													<label class="select-arrow"></label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br />
+								<div class="form-group">
+									<label class="form-label" for="letter_body">ABOUT YOUR EVENT BODY :</label>
+									<input class="form-control" type="tel" name="letter_body" placeholder="Enter About Event" />
+								</div>
+                <input type="file" id="real-file" name="image" hidden="hidden" />
+<button type="button" id="custom-button" for="image">CHOOSE A FILE</button>
+<span id="custom-text" for="image">No file chosen, yet.</span>
+
+								<br>
+								<div class="form-btn">
+									<button class="submit-btn" type="submit">Add to Dashboard</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+<script>
+const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+
+</script>
+
+</html>
